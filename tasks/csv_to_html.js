@@ -30,8 +30,6 @@ var mustache   = require('mustache')
     , markdown   = require('markdown').markdown
     , path = require('path');
 
-;
-
 module.exports = function(grunt) {
 
     grunt.registerMultiTask('csv_to_html_files', 'Compile HTML files with csv & mustache/handlebars template', function() {
@@ -123,7 +121,7 @@ module.exports = function(grunt) {
 
                 // loop through csv file and compile html
                 for(var i=0,l=rows.length;i<l;i++){
-                    html = ''
+                    html = '';
                     row = _.object(headers, rows[i]);
                     // Any column with json prefix will be parsed as JSON
                     for (var key in row){
@@ -157,8 +155,6 @@ module.exports = function(grunt) {
                     fi++;
 
             });
-
         });
     });
-
 };
