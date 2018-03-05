@@ -1,5 +1,5 @@
 {
-  "name": "grunt-csv-to-html-files",
+  "name": "grunt-csv-to-html",
   "description": "Grunt plugin that compiles HTML with csv and a mustache/handlebars template",
   "version": "0.1.0",
   "homepage": "https://github.com/sarcoma/csv-to-html/",
