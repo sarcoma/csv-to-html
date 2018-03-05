@@ -4,8 +4,6 @@ This is a fork of https://github.com/bencooling/csv-to-html that I've hacked abo
 
 I needed to merge a load of email signature data in to a template. This does the job.
 
-> Grunt plugin that compiles HTML with csv and a mustache/handlebars template
-
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
