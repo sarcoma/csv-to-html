@@ -29,14 +29,14 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    csv_to_html: {
+    csv_to_html_files: {
       example: {
         options : {
           registerHelpers:[{ 'lower':function(str){ return str.toLowerCase(); }}
                          , { 'upper':function(str){ return str.toUpperCase(); }}]
         }
         , files: {
-          'tmp/compiled.html': ['test/fixtures/tpl.mustache', 'test/fixtures/data-json.csv']
+          'tmp/compiled.html': ['test/fixtures/tpl.mustache', 'test/fixtures/data.csv']
         }
       }
     },
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'csv_to_html', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'csv_to_html_files', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
