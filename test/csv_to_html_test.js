@@ -30,12 +30,12 @@ exports.csv_to_html = {
   example: function(test) {
     test.expect(2);
 
-    var actual_one = grunt.file.read('tmp/compiled_0.html');
-    var expected_one = grunt.file.read('test/expected/compiled_0.html');
-    var actual_two = grunt.file.read('tmp/compiled_1.html');
-    var expected_two = grunt.file.read('test/expected/compiled_1.html');
-    test.equal(actual_one, expected_one, 'html compiled with mustache & data provided by csv.');
-    test.equal(actual_two, expected_two, 'html compiled with mustache & data provided by csv.');
+    var actual_one = grunt.file.read('tmp/sean-cooper_0.html');
+    var expected_one = grunt.file.read('test/expected/sean-cooper_0.html');
+    var actual_two = grunt.file.read('tmp/some-one-else_1.html');
+    var expected_two = grunt.file.read('test/expected/some-one-else_1.html');
+    test.equal(actual_one, expected_one, '1. html compiled with mustache & data provided by csv.');
+    test.equal(actual_two, expected_two, '2. html compiled with mustache & data provided by csv.');
 
     test.done();
   }
