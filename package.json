@@ -1,12 +1,19 @@
 {
   "name": "grunt-csv-to-html",
   "description": "Grunt plugin that compiles HTML with csv and a mustache/handlebars template",
-  "version": "0.1.0",
-  "homepage": "https://github.com/sarcoma/csv-to-html/",
+  "version": "0.5.0",
+  "homepage": "https://github.com/bencooling/csv-to-html",
   "author": {
-    "name": "Sean Cooper",
-    "email": "sean@orderandchaoscreative",
+    "name": "Ben Cooling",
+    "email": "office@bcooling.com.au",
     "url": "http://bcooling.com.au"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bencooling/csv-to-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bencooling/csv-to-html/issues"
   },
   "licenses": [
     {
@@ -41,5 +48,7 @@
     "handlebars",
     "html"
   ],
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "_id": "grunt-csv-to-html@0.5.0",
+  "_from": "grunt-csv-to-html@latest"
 }
