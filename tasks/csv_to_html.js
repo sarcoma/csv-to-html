@@ -132,13 +132,14 @@ module.exports = function(grunt) {
                             row[key.replace('markdown_','')] = markdown.toHTML(row[key]);
                         }
                     }
+                    console.log(row);
                     output = Handlebars.compile(tpl);
 
                     html += output(row);
                     // Write the destination file.
 
                     var fdir = path.dirname(f.dest);
-                    var fname = path.parse(f.dest).name;
+                    var fname = row.name.split(' ').join('-').toLowerCase();
                     var fext = path.parse(f.dest).ext;
 
                     grunt.file.write(fdir + '/' + fname + '_' + i + fext, html);
@@ -146,8 +147,6 @@ module.exports = function(grunt) {
                     // Print a success message.
                     grunt.log.writeln('File "' + fname + '_' + i + fext + '" created.');
                 }
-
-
 
                 if (fi===fl)
                     done();
