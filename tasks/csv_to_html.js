@@ -139,7 +139,7 @@ module.exports = function(grunt) {
                     // Write the destination file.
 
                     var fdir = path.dirname(f.dest);
-                    var fname = row.name.split(' ').join('-').toLowerCase();
+                    var fname = row.name.split(' ').join('-').toLowerCase().replace(',', '');
                     var fext = path.parse(f.dest).ext;
 
                     grunt.file.write(fdir + '/' + fname + '_' + i + fext, html);
