@@ -132,7 +132,6 @@ module.exports = function(grunt) {
                             row[key.replace('markdown_','')] = markdown.toHTML(row[key]);
                         }
                     }
-                    console.log(row);
                     output = Handlebars.compile(tpl);
 
                     html += output(row);
